@@ -58,10 +58,14 @@ class Twoffein(object):
 		return self._profile[profile]
 
 	def drink(self, drink, target=None):
-		pass
+		if target==None:
+			response = urllib2.urlopen("http://twoffein.com/api/post/tweet/?screen_name="+self._screenname+"&api_key="+self._apikey+"&encode=json&drink="+drink._key)
+		else:
+			response = urllib2.urlopen("http://twoffein.com/api/post/tweet/?screen_name="+self._screenname+"&api_key="+self._apikey+"&encode=json&drink="+drink._key+"&target_screen_name="+target)
+		return json.load(StringIO.StringIO(response.read()))
 
 	def give_cookie(self, target):
-		pass
+		return json.load(StringIO.StringIO(urllib2.urlopen("http://twoffein.com/api/post/cookie/?screen_name="+self._screenname+"&api_key="+self._apikey+"&encode=json&target_screen_name="+target).read()))
 
 	def __repr__(self):
 		return '<Twoffein API>'
