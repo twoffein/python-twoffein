@@ -1,0 +1,10 @@
+python-twoffein Changelog
+=========================
+
+2012-11-29
+----------
+ - whole API implemented
+
+2012-11-28
+----------
+ - All GET calls implemented
