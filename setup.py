@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 #
 # setup.py script for Twoffein
@@ -38,6 +38,11 @@ setup( name         = 'Twoffein',
        author_email = 'me@malte-bublitz.de',
        url          = 'http://twoffein.malte-bublitz.de/python',
        py_modules   = ['twoffein'],
+		 data_files   = [
+			 ("share/doc/python-twoffein",
+		       ["AUTHOR", "CHANGELOG", "LICENSE", "README.md"]
+		    )
+			 ],
        license      = 'License :: OSI Approved :: BSD License',
        classifiers  = [
                        'Development Status :: 4 - Beta',
