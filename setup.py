@@ -32,7 +32,7 @@
 from distutils.core import setup
 
 setup( name         = 'Twoffein',
-       version      = '0.20121206',
+       version      = '0.20121212',
        description  = 'A module to access the Twoffein.com API easily',
        author       = 'Malte Bublitz',
        author_email = 'me@malte-bublitz.de',

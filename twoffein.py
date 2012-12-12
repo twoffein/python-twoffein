@@ -82,13 +82,3 @@ class Drink(object):
 	def __repr__(self):
 		return '<Drink "'+self._key+'">'
 
-def main():
-	api = Twoffein( ("malte70","ABCDEFGHIJK") )
-	print api.get_drinks()[1]
-	print api.get_profile()
-	print api.get_profile('Revengeday')
-	drink = Drink("schwarztee")
-	print drink.get_real_name(api)
-
-if __name__=="__main__":
-	main()
